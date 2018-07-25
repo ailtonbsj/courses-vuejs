@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<div id="app">
+    <h1>{{
+    isActive == 'active' ?
+    'is Active': 'Not active' }}</h1>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            isActive: 'not active'
+        },
+        watch: {
+            isActive: function(v){
+                console.log('Watched: '+v);
+            }
+        }
+    })
+</script>
