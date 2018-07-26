@@ -1,0 +1,19 @@
+{
+  "name": "course-vuejs-diaz",
+  "version": "1.0.0",
+  "description": "Examples from course Vue.js by Diaz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ailtonbsj/course-vuejs-diaz.git"
+  },
+  "author": "ailtonbsj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ailtonbsj/course-vuejs-diaz/issues"
+  },
+  "homepage": "https://github.com/ailtonbsj/course-vuejs-diaz#readme",
+  "devDependencies": {
+    "@vue/cli": "^3.0.0-rc.5",
+    "@vue/cli-init": "^3.0.0-rc.5"
+  }
+}
