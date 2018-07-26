@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Components</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+   <div id="app">
+       <post :data="35"></post>
+   </div>
+   <script>
+       Vue.component('post', {
+           props: ['data'],
+           template:
+           `<h1 @click="display">{{data}}</h1>`,
+           data() {
+             return {
+                 msg: 'Hello inline on data!'
+             }  
+           },
+           methods: {
+               display() {
+                   console.log('hey!');
+               }
+           }
+       });
+       new Vue({
+           el: '#app'
+       });
+   </script> 
+</body>
+</html>

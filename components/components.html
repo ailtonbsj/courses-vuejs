@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Components</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+   <div id="app">
+       <post></post>
+   </div>
+   <script>
+       Vue.component('post', {
+           template: `<h1>Hello Component!</h1>`
+       });
+       new Vue({
+           el: '#app'
+       });
+   </script> 
+</body>
+</html>
