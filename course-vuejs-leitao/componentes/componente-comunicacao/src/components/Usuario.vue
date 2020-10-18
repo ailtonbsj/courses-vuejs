@@ -8,7 +8,7 @@
         <hr>
         <div class="componentes">
             <app-usuario-info :idade="idade" :nome="nome" @nomeMudou="nome = $event" :callback="reiniciaNome" />
-            <app-usuario-editar @idadeCallback="idade = $event" :idade="idade" />
+            <app-usuario-editar :idade="idade" />
         </div>
     </div>
 </template>

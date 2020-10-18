@@ -2,19 +2,27 @@
     <div class="componente">
         <h2>Alterar os Dados de Usuário</h2>
         <p>Edite as informações</p>
-        <p>Idade é {{ idade }}</p>
+        <p>Idade é {{ idadeLocal }}</p>
         <button @click="alterarIdade">Mudar idade</button>
     </div>
 </template>
 
 <script>
+import barramento from '@/barramento'
+
 export default {
     props: {
         idade: Number,
     },
+    data() {
+        return {
+            idadeLocal: this.idade
+        }
+    },
     methods: {
         alterarIdade() {
-            this.$emit('idadeCallback', 30)
+            this.idadeLocal = 30
+            barramento.$emit('idadeMudou', this.idadeLocal)
         }
     }
 }
