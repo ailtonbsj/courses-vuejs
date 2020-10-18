@@ -1,0 +1,42 @@
+<template>
+  <div class="menu">
+    <v-navigation-drawer app>
+      <v-toolbar flat>
+        <v-list>
+          <v-list-item>
+            <v-list-item-title class="title"> Menu </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-toolbar>
+
+      <v-divider></v-divider>
+
+      <v-list dense class="pt-0">
+        <v-list-item v-for="item in itensMenu" :key="item.titulo">
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>{{ item.titulo }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      itensMenu: [
+        { titulo: "Início", icon: "mdi-view-dashboard" },
+        { titulo: "Sobre", icon: "mdi-forum" },
+      ],
+    };
+  },
+};
+</script>
+
+<style>
+</style>
