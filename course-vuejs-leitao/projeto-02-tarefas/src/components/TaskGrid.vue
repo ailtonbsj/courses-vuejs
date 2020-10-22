@@ -1,7 +1,13 @@
 <template>
   <div class="task-grid">
     <template v-if="tasks.length">
-      <Task v-for="task in tasks" :key="task.name" :task="task"></Task>
+      <Task
+        v-for="(task, i) in tasks"
+        :key="task.name"
+        :task="task"
+        @task-deleted="$emit('task-deleted', i)"
+        @task-state-changed="$emit('task-state-changed', i)"
+      ></Task>
     </template>
     <p v-else class="no-task">Sua vida está em dia ;)</p>
   </div>
@@ -21,16 +27,15 @@ export default {
 
 <style>
 .task-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .task-grid .task {
-    margin: 10px;
+  margin: 10px;
 }
-
 .no-task {
-    color: #AAA;
-    font-size: 1.7rem;
+  color: #aaa;
+  font-size: 1.7rem;
 }
 </style>
