@@ -1,5 +1,7 @@
 # History of commands
 
+> Folder: formulario-exercicios
+
 ```bash
 # Entra na pasta
 cd formulario-exercicios
@@ -11,5 +13,15 @@ npm i
 code .
 
 # Executa server
+npm run serve
+```
+
+> Folder: formulario-desafio
+
+```bash
+# Entra na pasta
+cd formulario-desafio
+npm i
+code .
 npm run serve
 ```
