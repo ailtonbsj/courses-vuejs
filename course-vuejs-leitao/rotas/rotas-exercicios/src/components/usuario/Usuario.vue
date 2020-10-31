@@ -2,7 +2,7 @@
   <div class="usuario">
     <h2>Usuários</h2>
     <hr />
-    <p><strong>Código: </strong> {{ idx }}</p>
+    <router-view></router-view>
     <button sucesso @click="irParaInicio">Voltar</button>
   </div>
 </template>
@@ -11,14 +11,26 @@
 export default {
   methods: {
     irParaInicio() {
-      this.$router.push("/");
+      // this.$router.push("/");
+      this.$router.push({ name: 'inicio'});
     },
   },
-  data() {
-    return {
-      idx: this.$route.params.id,
-    };
-  },
+  // props: {
+  //   id: {
+  //     type: String,
+  //     required: true
+  //   }
+  // },
+  // data() {
+  //   return {
+  //     id: this.$route.params.id,
+  //   };
+  // },
+  // watch: {
+  //   $route(to, from) {
+  //     this.id = to.params.id
+  //   }
+  // }
 };
 </script>
 
