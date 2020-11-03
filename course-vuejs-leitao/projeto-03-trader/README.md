@@ -15,4 +15,9 @@ npm i
 # Start server hot reloading
 npm run serve
 
+# Install package Vue Router
+npm i vue-router
+
+#Install package Vuex
+npm i vuex
 ```
