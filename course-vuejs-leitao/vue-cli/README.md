@@ -35,6 +35,6 @@ vue add electron-builder
 # Roda app como desktop
 npm run electron:serve
 
-# Electron plugin
+# Vuetify plugin
 vue add vuetify
 ```
