@@ -21,4 +21,7 @@ npm i vue-router
 # Install package Vuex
 npm i vuex
 
+# Install axios
+npm i axios
+
 ```
