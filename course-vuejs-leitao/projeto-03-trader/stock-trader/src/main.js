@@ -6,6 +6,14 @@ import store from './store/store'
 
 Vue.config.productionTip = false
 
+Vue.filter('currency', value => {
+	return value.toLocaleString('pt-BR', {
+		minimumFractionDigits: 2,
+		style: 'currency',
+		currency: 'BRL'
+	})
+})
+
 new Vue({
 	vuetify,
 	router,
