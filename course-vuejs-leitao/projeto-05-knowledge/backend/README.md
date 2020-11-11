@@ -22,7 +22,7 @@ On terminal
 sudo npm i -g knex
 
 # Add latests packages of project
-npm i knex pg pm2
+npm i knex pg pm2 jwt-simple bcrypt-nodejs
 
 # Create config file knex
 knex init

@@ -1,10 +1,16 @@
 module.exports = app => {
+
+  app.post('/signup', app.api.user.save)
+  app.post('/signin', app.api.auth.signin)
+  app.post('/validateToken', app.api.auth.validateToken)
+
   app.route('/users')
     .post(app.api.user.save)
     .get(app.api.user.get)
   app.route('/users/:id')
     .put(app.api.user.save)
     .get(app.api.user.get)
+
   app.route('/categories')
     .post(app.api.category.save)
     .get(app.api.category.get)
@@ -14,6 +20,7 @@ module.exports = app => {
     .put(app.api.category.save)
     .get(app.api.category.get)
     .delete(app.api.category.remove)
+
   app.route('/articles')
     .get(app.api.article.get)
     .post(app.api.article.save)
@@ -24,4 +31,5 @@ module.exports = app => {
 
   app.route('/categories/:id/articles')
     .get(app.api.article.getByCategory)
+
 }
