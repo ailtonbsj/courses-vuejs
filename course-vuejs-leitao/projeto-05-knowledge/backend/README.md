@@ -22,7 +22,9 @@ On terminal
 sudo npm i -g knex
 
 # Add latests packages of project
-npm i knex pg pm2 jwt-simple bcrypt-nodejs
+npm i knex pg pm2 bcrypt-nodejs
+npm i jwt-simple passport passport-jwt
+npm i node-schedule mongoose
 
 # Create config file knex
 knex init
@@ -31,6 +33,7 @@ knex init
 knex migrate:make create_table_users
 knex migrate:make create_table_categories
 knex migrate:make create_table_articles
+knex migrate:make add_deleted_at_table_users
 
 # Run migrations
 knex migrate:latest
