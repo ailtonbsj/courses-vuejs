@@ -12,7 +12,7 @@ module.exports = app => {
     const stat = new Stat({
       users: usersCount.count,
       categories: categoriesCount.count,
-      articlesCount: articlesCount.count,
+      articles: articlesCount.count,
       createdAt: new Date()
     })
 
