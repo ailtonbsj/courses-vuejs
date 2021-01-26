@@ -48,7 +48,7 @@ module.exports = app => {
     }
   }
 
-  const limit = 10 // usado para paginacao
+  const limit = 2 // usado para paginacao
   const get = async (req, res) => {
     const page = req.query.page || 1
     const result = await app.db('articles').count('id').first()
